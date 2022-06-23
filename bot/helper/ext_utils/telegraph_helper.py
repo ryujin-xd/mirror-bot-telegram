@@ -7,7 +7,7 @@ from time import sleep
 from telegraph import Telegraph
 from telegraph.exceptions import RetryAfterError
 
-from bot import LOGGER
+from bot import LOGGER, AUTHOR_NAME, AUTHOR_URL
 
 
 class TelegraphHelper:
@@ -78,4 +78,4 @@ class TelegraphHelper:
         return
 
 
-telegraph=TelegraphHelper('Mirror-Leech-Telegram-Bot', 'https://github.com/anasty17/mirror-leech-telegram-bot')
+telegraph=TelegraphHelper(f'{AUTHOR_NAME}', f'{AUTHOR_URL}')
