@@ -1,8 +1,10 @@
 anytree
 appdirs
 aria2p
+asyncio
 attrdict
 beautifulsoup4
+bencoding
 cfscrape
 feedparser
 flask
@@ -22,7 +24,6 @@ python-magic
 python-telegram-bot
 qbittorrent-api
 requests
-six
 telegraph
 tenacity
 tgCrypto
