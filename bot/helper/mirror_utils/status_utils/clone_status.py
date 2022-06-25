@@ -1,11 +1,11 @@
-from bot.helper.ext_utils.bot_utils import MirrorStatus, EngineStatus, get_readable_file_size, get_readable_time
+from bot.helper.ext_utils.bot_utils import MirrorStatus, get_readable_file_size, get_readable_time
 
 
 class CloneStatus:
-    def __init__(self, obj, size, message, gid):
+    def __init__(self, obj, size, update, gid):
         self.__obj = obj
         self.__size = size
-        self.message = message
+        self.message = update.message
         self.__gid = gid
 
     def processed_bytes(self):
@@ -19,9 +19,6 @@ class CloneStatus:
 
     def status(self):
         return MirrorStatus.STATUS_CLONING
-
-    def eng(self):
-        return EngineStatus.STATUS_GDRIVE
 
     def name(self):
         return self.__obj.name
